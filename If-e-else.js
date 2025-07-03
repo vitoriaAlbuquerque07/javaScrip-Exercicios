@@ -1,14 +1,14 @@
 // 1. verificação de idade >>>
 
-let idade = 19;
-if (idade > 18 ) {
+let idade = 15;
+if (idade >= 18 ) {
     console.log("você é de maior");
     
 } else {
     console.log("você não é de maior");
 }
 
-//2. número negativo,positivo ou zero -->>>
+//2. número negativo, positivo ou zero -->>>
 
 let numero = -0;
 if(numero > 0){
@@ -29,10 +29,10 @@ else{
 let maiorNumero = 21;
 let menorNumero = 21;
 
-if( maiorNumero > 21 ){
+if( maiorNumero > menorNumero ){
     console.log(`${maiorNumero} é maior do que ${menorNumero}`);
 }
-else if(  maiorNumero < 21 ){
+else if(  maiorNumero < menorNumero ){
     console.log(`${maiorNumero} é menor do que ${menorNumero}`);
 }
 else {
@@ -54,8 +54,8 @@ else{
 
 let portugues = 3.0;
 let matematica = 9.0;
-let ciencia = 6.0;
-let media = (`${(portugues + matematica + ciencia) / 3} `);
+let ciencia = 5.0;
+let media = ((portugues + matematica + ciencia) / 3).toFixed(1);
 
 
 
@@ -63,7 +63,7 @@ if( media >= 7 ){
     console.log( `${media}  Aprovado ` );
 
 } 
-else if( media >= 5 || media >= 6.9  ){
+else if( media >= 5 && media >= 6.9  ){
     console.log( `${media}  Recuperação ` );
     
 }
@@ -77,14 +77,17 @@ else {
 
 // 6. desconto em compra
 
-let compras = 246;
+let compras = 9119;
+let desconto = 10;
 
 
 if( compras > 100  ){
-    let Porcentual = ((compras * 10) / 100 );
+    let Porcentual = (compras - ((compras * desconto) / 100 )).toFixed(2);
     
-    console.log(`Novo Valor: ${(compras - Porcentual) }  `);
 
+}
+else{
+    console.log(`valor a pagar : R$ ${(compras).toFixed(2)}`)
 }
 
 // 7. verificação de ano bissexto 
@@ -114,7 +117,7 @@ else{
 // 9. frete gratis 
 
 let ValorCompras = 90;
-let valorPorcento = (`${(ValorCompras * 10) / 100 }`);
+let valorPorcento = ((ValorCompras * 10) / 100 );
 let frete = 20;
 
 if(ValorCompras >= 100 ){
@@ -125,10 +128,10 @@ else{
 }
 
 // 10. número dentro de um intervalo
-let intervalo = 80
+let intervalo = 80;
 if(intervalo >=10 && intervalo <=50 ){
-    console.log("esta no intervalo")
+    console.log("esta no intervalo");
 }
 else{
-    console.log("fora do intervalo")
+    console.log("fora do intervalo");
 }
